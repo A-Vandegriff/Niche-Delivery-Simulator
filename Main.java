@@ -6,12 +6,11 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) { 
-                
-        Random random = new Random();
+
         Field myField = new Field();
         Rig rig = new Rig();
-        myField.randomizeFieldAmt();
-        myField.randomizeAcres();
+
+        myField.displayFields(myField.getAllFields());
         rig.randomizeRig();
 	 }
 }
