@@ -28,7 +28,11 @@ public class Field{
     }
     public void randomizeAcres(){
         setAcres(random.nextInt(40,150));
-        System.out.println("Field for the day: " + getAcres() + " acres");
+        System.out.println("Current Field: " + getAcres() + " acres\nFields to go " + (getFieldAmt()));
+    }
+    public void randomizeFieldAmt(){
+        setFieldAmt(random.nextInt(1,6));
+
     }
 
 

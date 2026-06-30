@@ -10,7 +10,7 @@ public class Main {
         Random random = new Random();
         Field myField = new Field();
         Rig rig = new Rig();
-        
+        myField.randomizeFieldAmt();
         myField.randomizeAcres();
         rig.randomizeRig();
 	 }
