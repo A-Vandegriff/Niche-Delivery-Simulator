@@ -1,8 +1,8 @@
-# Farm Route Simulator
+# Niche Delivery Simulator
 
 ## Overview
 
-The Farm Route Simulator is a Java application that models the daily workflow of an agricultural service operation. The project simulates farms, fields, routes, and equipment to recreate the logistics involved in planning and completing daily work assignments.
+The Niche Delivery Simulator is a Java application that models the daily workflow of an agricultural service operation. The project simulates farms, fields, routes, and equipment to recreate the logistics involved in planning and completing daily work assignments for a company that moves liquid from farms to fields.
 
 This project started as a way to improve my Java skills, but it quickly turned into something I could actually use at work. Instead of building another generic practice application, I wanted to model the workflow I deal with every day and create a tool that could help answer real planning questions before a job even begins.
 
