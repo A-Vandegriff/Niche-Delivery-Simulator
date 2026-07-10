@@ -2,6 +2,8 @@ import classes.farm.Farm;
 import classes.rig.Rig;
 import classes.route.Route;
 import classes.field.Field;
+import classes.location.Location;
+import classes.service.GeocodingService;
 /*
 STUFF NEEDED TO FULLY CALCULATE THE TIME OF A JOB
 
@@ -20,8 +22,12 @@ public class Main {
         Field myField = new Field();
         Rig rig = new Rig();
         Route route = new Route();
+        GeocodingService geocodingService = new GeocodingService();
+
+        Location shop = geocodingService.findLocation("405 baldwin");
 
         myField.displayFields(myField.getAllFields());
         rig.randomizeRig();
+        shop.display();
 	 }
 }
