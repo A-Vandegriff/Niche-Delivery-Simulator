@@ -8,10 +8,6 @@ import java.net.http.HttpResponse;
 public class GeocodingService {
     public Location findLocation(String address) {
         HttpClient client = HttpClient.newHttpClient();
-        HttpClient.newBuilder()
-                .GET()
-                .uri(URI.create(""))
-                .build();
         return new Location(address,23,-84);
 
     }
