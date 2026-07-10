@@ -23,7 +23,5 @@ public class Main {
 
         myField.displayFields(myField.getAllFields());
         rig.randomizeRig();
-        route.roundTrip();
-        route.totRoundTrip();
 	 }
 }
