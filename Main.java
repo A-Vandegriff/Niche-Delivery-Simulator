@@ -1,9 +1,8 @@
-import classes.farm.Farm;
 import classes.rig.Rig;
 import classes.route.Route;
 import classes.field.Field;
 import classes.location.Location;
-import classes.service.GeocodingService;
+import java.util.Scanner;
 /*
 STUFF NEEDED TO FULLY CALCULATE THE TIME OF A JOB
 
@@ -17,17 +16,35 @@ how the route could impact the flow if multiple trucks
 //even with stop signs and traffic, maybe use time of the day for busyness etc. 
 
 public class Main {
-    public static void main(String[] args) { 
 
-        Field myField = new Field();
-        Rig rig = new Rig();
-        Route route = new Route();
-        GeocodingService geocodingService = new GeocodingService();
+    public static void main(String[] args) {
 
-        Location shop = geocodingService.findLocation("405 baldwin");
+        try (Scanner scanner = new Scanner(System.in)){
+            Location farmLocation = createLocation(scanner);
 
-        myField.displayFields(myField.getAllFields());
-        rig.randomizeRig();
-        shop.display();
+            Field myField = new Field();
+            Rig rig = new Rig();
+            Route route = new Route();
+
+            farmLocation.display();
+            myField.displayFields(myField.getAllFields());
+            rig.randomizeRig();
+        }
+
+
+
+
 	 }
+    public static Location createLocation(Scanner scanner) {
+        System.out.print("Enter farm name: ");
+        String locationName = scanner.nextLine();
+
+        System.out.print("Enter latitude: ");
+        double latitude = scanner.nextDouble();
+
+        System.out.print("Enter longitude: ");
+        double longitude = scanner.nextDouble();
+
+        return new Location(locationName, latitude, longitude);
+    }
 }
