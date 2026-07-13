@@ -22,12 +22,10 @@ public class Main {
         try (Scanner scanner = new Scanner(System.in)){
             Location farmLocation = createLocation(scanner);
 
-            Field myField = new Field();
+            Field field = new Field();
             Rig rig = new Rig();
-            Route route = new Route();
 
             farmLocation.display();
-            myField.displayFields(myField.getAllFields());
             rig.randomizeRig();
         }
 
