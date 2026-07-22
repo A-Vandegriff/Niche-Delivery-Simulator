@@ -1,15 +1,32 @@
 package classes.farm;
 import classes.field.Field;
+import classes.location.Location;
 import java.util.ArrayList;
 
 
 public class Farm {
 	private String name;
-	private boolean hasSand;
-	private int fieldAmt;
+	private Location location;
 	private ArrayList<Field> fields;
-	
-	public Farm(){
+	private boolean hasSand;
 
+	public Farm(String name, Location location) {
+		this.location = location;
+		this.name = name;
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void display(){
+		System.out.println(name);
+		System.out.println(location.getLatitude());
+		System.out.println(location.getLongitude());
+	}
+
 }
